@@ -4,6 +4,8 @@ This is an official starter Turborepo.
 
 ## Using this example
 
+For the example to work without problems, you must use node version 14.
+
 Run the following command:
 
 ```sh
@@ -16,9 +18,8 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `web`: [Next.js](https://nextjs.org/) app
+- `server`: Express API app
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
