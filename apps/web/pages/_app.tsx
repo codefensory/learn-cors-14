@@ -1,0 +1,38 @@
+import { AppProps } from "next/app";
+import Head from "next/head";
+import { MantineProvider } from "@mantine/core";
+import TrackerProvider from "../providers/TrakerProvider";
+import { useEffect } from "react";
+import eruda from "eruda";
+
+export default function App(props: AppProps) {
+  const { Component, pageProps } = props;
+
+  useEffect(() => {
+    //eruda.init();
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Page title</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
+
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{ colorScheme: "dark" }}
+      >
+        <TrackerProvider
+          config={{ projectKey: "2nK7F8UlmhKGFTZctSpp", userIdEnabled: true }}
+        >
+          <Component {...pageProps} />
+        </TrackerProvider>
+      </MantineProvider>
+    </>
+  );
+}
