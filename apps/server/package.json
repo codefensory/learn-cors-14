@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs --dts",
     "dev": "concurrently \"tsup src/index.ts --watch\" \"nodemon ./dist/index.js\"",
-    "start": "npm run build && node dist/index.js"
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
