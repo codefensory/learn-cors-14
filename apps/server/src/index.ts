@@ -27,6 +27,10 @@ app.post("/", (_req, res) => {
   });
 });
 
+app.get("/", (_req, res) => {
+  res.send("Hola mundo");
+});
+
 const apolloServer = new ApolloServer({
   schema: new GraphQLSchema({
     query: new GraphQLObjectType({
